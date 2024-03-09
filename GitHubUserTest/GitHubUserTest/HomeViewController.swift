@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.backgroundColor = .orange
+        ApiService.shared.getProfile()
     }
     
 }

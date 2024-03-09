@@ -93,3 +93,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+/GitHubUserTest/GitHubUserTest.xcworkspace/xcuserdata/
+/GitHubUserTest/GitHubUserTest.xcworkspace/xcshareddata
+/GitHubUserTest/GitHubUserTest.xcodeproj/xcuserdata/

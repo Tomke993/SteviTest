@@ -13,6 +13,8 @@
 		49E30DDB2B9CE6EB00CC7A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E30DDA2B9CE6EB00CC7A2B /* Assets.xcassets */; };
 		49E30DDE2B9CE6EB00CC7A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E30DDC2B9CE6EB00CC7A2B /* LaunchScreen.storyboard */; };
 		49E30DE62B9D09ED00CC7A2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */; };
+		49E30DE92B9D0F0400CC7A2B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DE82B9D0F0400CC7A2B /* ApiService.swift */; };
+		49E30DEC2B9D115F00CC7A2B /* UserBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DEB2B9D115F00CC7A2B /* UserBean.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		49E30DDD2B9CE6EB00CC7A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49E30DDF2B9CE6EB00CC7A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		49E30DE82B9D0F0400CC7A2B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		49E30DEB2B9D115F00CC7A2B /* UserBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBean.swift; sourceTree = "<group>"; };
 		55C55DBDA0DA77AFD116F8DA /* Pods_GitHubUserTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4F37189E9E308EE84D80C7 /* Pods-GitHubUserTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserTest.debug.xcconfig"; path = "Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F872C2F4A2FF8388109E575B /* Pods-GitHubUserTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserTest.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		49E30DD02B9CE6EA00CC7A2B /* GitHubUserTest */ = {
 			isa = PBXGroup;
 			children = (
+				49E30DEA2B9D114E00CC7A2B /* Beans */,
+				49E30DE72B9D0EF100CC7A2B /* Services */,
 				49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */,
 				49E30DD12B9CE6EA00CC7A2B /* AppDelegate.swift */,
 				49E30DD72B9CE6EA00CC7A2B /* Main.storyboard */,
@@ -71,13 +77,28 @@
 			path = GitHubUserTest;
 			sourceTree = "<group>";
 		};
+		49E30DE72B9D0EF100CC7A2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				49E30DE82B9D0F0400CC7A2B /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		49E30DEA2B9D114E00CC7A2B /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				49E30DEB2B9D115F00CC7A2B /* UserBean.swift */,
+			);
+			path = Beans;
+			sourceTree = "<group>";
+		};
 		8238ED5970A3E3A80D188569 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7A4F37189E9E308EE84D80C7 /* Pods-GitHubUserTest.debug.xcconfig */,
 				F872C2F4A2FF8388109E575B /* Pods-GitHubUserTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +121,7 @@
 				49E30DCA2B9CE6EA00CC7A2B /* Sources */,
 				49E30DCB2B9CE6EA00CC7A2B /* Frameworks */,
 				49E30DCC2B9CE6EA00CC7A2B /* Resources */,
+				BCDA68FF33CFDFEC394853AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +201,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BCDA68FF33CFDFEC394853AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,6 +227,8 @@
 			files = (
 				49E30DD22B9CE6EA00CC7A2B /* AppDelegate.swift in Sources */,
 				49E30DE62B9D09ED00CC7A2B /* HomeViewController.swift in Sources */,
+				49E30DEC2B9D115F00CC7A2B /* UserBean.swift in Sources */,
+				49E30DE92B9D0F0400CC7A2B /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +291,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -313,7 +354,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
