@@ -17,9 +17,7 @@ class ApiService {
     private init() {}
     
     var headers: HTTPHeaders {
-        [ //.accept("application/vnd.github+json"),
-          .authorization(bearerToken: token)
-        ]
+        [.authorization(bearerToken: token)]
     }
     
     func getProfile(complition: @escaping (UserBean) -> ()) {
@@ -28,7 +26,6 @@ class ApiService {
         request.responseDecodable(of: UserBean.self, completionHandler: { response in
             switch response.result {
             case let .success(user):
-                print("Response: \n \(user)")
                 complition(user)
             case let .failure(error):
                 print("ERROR \n\(error)")
@@ -42,7 +39,6 @@ class ApiService {
         request.responseDecodable(of: [RepositoryBean].self, completionHandler: { response in
             switch response.result {
             case let .success(repositories):
-                print("Response: \n \(repositories)")
                 complition(repositories)
             case let .failure(error):
                 print("ERROR \n\(error)")
@@ -50,14 +46,13 @@ class ApiService {
         })
     }
     
-    func getCommits(forRepo repo: String) {
+    func getCommits(forRepo repo: String, complition: @escaping ([CommitBean]) -> ()) {
         let request = AF.request("https://api.github.com/repos/" + username + "/\(repo)/commits", method: .get, headers: headers)
         request.validate()
         request.responseDecodable(of: [CommitBean].self, completionHandler: { response in
             switch response.result {
             case let .success(commits):
-                print("Response: \n \(commits)")
-//                complition(repositories)
+                complition(commits)
             case let .failure(error):
                 print("ERROR \n\(error)")
             }

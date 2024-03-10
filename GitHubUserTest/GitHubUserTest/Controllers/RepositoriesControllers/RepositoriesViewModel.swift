@@ -33,7 +33,7 @@ class RepositoriesViewModel {
         return newDateString
     }
     
-    func loadCommits(forRepo repo: String) {
-        apiService.getCommits(forRepo: repo)
+    func goToCommitList(ofRepo repo: String) {
+        controller?.goToCommitList(ofRepo: repo)
     }
 }

@@ -5,13 +5,12 @@
 //  Created by Stefan Tomic on 10.3.24..
 //
 
-struct CommitBean: Codable {
-    var node_id: String
+struct CommitBean: Codable, Hashable {
     var sha: String
     var commit: CommitDetailsBean
 }
 
-struct CommitDetailsBean: Codable {
+struct CommitDetailsBean: Codable, Hashable {
     var message: String
     var comment_count: Int
 }

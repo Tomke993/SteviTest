@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol RepositoriesViewControllerProtocol {
     func initView()
+    func goToCommitList(ofRepo repo: String)
 }
 
 class RepositoriesViewController: UIViewController, RepositoriesViewControllerProtocol {
@@ -31,4 +32,9 @@ class RepositoriesViewController: UIViewController, RepositoriesViewControllerPr
         hostingController.didMove(toParent: self)
     }
 
+    func goToCommitList(ofRepo repo: String) {
+        let commitController = CommitsViewController()
+        commitController.repoName = repo
+        navigationController?.pushViewController(commitController, animated: true)
+    }
 }
