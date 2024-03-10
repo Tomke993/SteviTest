@@ -6,10 +6,11 @@
 //
 
 
-struct RepositoryBean: Codable {
+struct RepositoryBean: Codable, Hashable {
     var id: Int
     var name: String
     var visibility: String
     var size: Int
     var forks_count: Int
+    var created_at: String
 }

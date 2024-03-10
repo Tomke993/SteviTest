@@ -36,14 +36,14 @@ class ApiService {
         })
     }
     
-    func getRepositories() {
+    func getRepositories(complition: @escaping ([RepositoryBean]) -> ()) {
         let request = AF.request("https://api.github.com/users/" + username + "/repos", method: .get, headers: headers)
         request.validate()
         request.responseDecodable(of: [RepositoryBean].self, completionHandler: { response in
             switch response.result {
             case let .success(repositories):
                 print("Response: \n \(repositories)")
-//                complition(user)
+                complition(repositories)
             case let .failure(error):
                 print("ERROR \n\(error)")
             }

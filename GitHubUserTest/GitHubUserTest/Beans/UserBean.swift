@@ -8,10 +8,8 @@
 
 struct UserBean: Codable {
     var id: Int
-//    var login: String
+    var login: String
     var email: String?
-    var name: String?
     var company: String?
     var avatar_url: String
-    var repos_url: String
 }

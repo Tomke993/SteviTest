@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol HomeViewControllerProtocol {
     func initView()
+    func goToRepositoryList()
 }
 
 class HomeViewController: UIViewController, HomeViewControllerProtocol {
@@ -31,4 +32,8 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
         hostingController.didMove(toParent: self)
     }
     
+    func goToRepositoryList() {
+        let repositoriesController = RepositoriesViewController()
+        navigationController?.pushViewController(repositoriesController, animated: true)
+    }
 }

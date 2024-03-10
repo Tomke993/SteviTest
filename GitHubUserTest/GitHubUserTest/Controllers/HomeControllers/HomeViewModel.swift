@@ -16,13 +16,13 @@ class HomeViewModel {
     func loadUser() {
         apiService.getProfile { user in
             self.user = user
-            self.user?.name = self.apiService.username
-//            self.user?.company = "Stevi"
+            self.user?.company = "Stevi"
             self.controller?.initView()
         }
     }
     
-    func loadRepositories() {
-        apiService.getRepositories()
+    func goToRepositoryList() {
+        controller?.goToRepositoryList()
     }
+    
 }
