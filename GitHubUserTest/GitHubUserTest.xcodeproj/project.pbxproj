@@ -15,6 +15,9 @@
 		49E30DE62B9D09ED00CC7A2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */; };
 		49E30DE92B9D0F0400CC7A2B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DE82B9D0F0400CC7A2B /* ApiService.swift */; };
 		49E30DEC2B9D115F00CC7A2B /* UserBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DEB2B9D115F00CC7A2B /* UserBean.swift */; };
+		49E30DF02B9DC00D00CC7A2B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DEF2B9DC00D00CC7A2B /* HomeViewModel.swift */; };
+		49E30DF22B9DC14A00CC7A2B /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DF12B9DC14A00CC7A2B /* HomeUIView.swift */; };
+		49E30DF42B9DD6EF00CC7A2B /* RepositoryBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E30DF32B9DD6EF00CC7A2B /* RepositoryBean.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49E30DE82B9D0F0400CC7A2B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		49E30DEB2B9D115F00CC7A2B /* UserBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBean.swift; sourceTree = "<group>"; };
+		49E30DEF2B9DC00D00CC7A2B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		49E30DF12B9DC14A00CC7A2B /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		49E30DF32B9DD6EF00CC7A2B /* RepositoryBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBean.swift; sourceTree = "<group>"; };
 		55C55DBDA0DA77AFD116F8DA /* Pods_GitHubUserTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4F37189E9E308EE84D80C7 /* Pods-GitHubUserTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserTest.debug.xcconfig"; path = "Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F872C2F4A2FF8388109E575B /* Pods-GitHubUserTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserTest.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserTest/Pods-GitHubUserTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,9 +71,9 @@
 		49E30DD02B9CE6EA00CC7A2B /* GitHubUserTest */ = {
 			isa = PBXGroup;
 			children = (
-				49E30DEA2B9D114E00CC7A2B /* Beans */,
+				49E30DED2B9DBF1B00CC7A2B /* Controllers */,
 				49E30DE72B9D0EF100CC7A2B /* Services */,
-				49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */,
+				49E30DEA2B9D114E00CC7A2B /* Beans */,
 				49E30DD12B9CE6EA00CC7A2B /* AppDelegate.swift */,
 				49E30DD72B9CE6EA00CC7A2B /* Main.storyboard */,
 				49E30DDA2B9CE6EB00CC7A2B /* Assets.xcassets */,
@@ -89,8 +95,27 @@
 			isa = PBXGroup;
 			children = (
 				49E30DEB2B9D115F00CC7A2B /* UserBean.swift */,
+				49E30DF32B9DD6EF00CC7A2B /* RepositoryBean.swift */,
 			);
 			path = Beans;
+			sourceTree = "<group>";
+		};
+		49E30DED2B9DBF1B00CC7A2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49E30DEE2B9DBF3300CC7A2B /* HomeControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49E30DEE2B9DBF3300CC7A2B /* HomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49E30DE52B9D09ED00CC7A2B /* HomeViewController.swift */,
+				49E30DEF2B9DC00D00CC7A2B /* HomeViewModel.swift */,
+				49E30DF12B9DC14A00CC7A2B /* HomeUIView.swift */,
+			);
+			path = HomeControllers;
 			sourceTree = "<group>";
 		};
 		8238ED5970A3E3A80D188569 /* Pods */ = {
@@ -228,7 +253,10 @@
 				49E30DD22B9CE6EA00CC7A2B /* AppDelegate.swift in Sources */,
 				49E30DE62B9D09ED00CC7A2B /* HomeViewController.swift in Sources */,
 				49E30DEC2B9D115F00CC7A2B /* UserBean.swift in Sources */,
+				49E30DF02B9DC00D00CC7A2B /* HomeViewModel.swift in Sources */,
 				49E30DE92B9D0F0400CC7A2B /* ApiService.swift in Sources */,
+				49E30DF42B9DD6EF00CC7A2B /* RepositoryBean.swift in Sources */,
+				49E30DF22B9DC14A00CC7A2B /* HomeUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
