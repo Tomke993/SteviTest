@@ -32,4 +32,8 @@ class RepositoriesViewModel {
         let newDateString = dateFormatter.string(from: date)
         return newDateString
     }
+    
+    func loadCommits(forRepo repo: String) {
+        apiService.getCommits(forRepo: repo)
+    }
 }

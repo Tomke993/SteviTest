@@ -17,7 +17,7 @@ struct RepositoriesUIView: View {
             List(model.repositoryList, id: \.self) { repository in
                 Section {
                     Button(action: {
-                        
+                        model.loadCommits(forRepo: repository.name)
                     }, label: {
                         VStack{
                             HStack {
@@ -26,7 +26,7 @@ struct RepositoriesUIView: View {
                             HStack {
                                 Text("Created: \(model.getCreatedDate(dateString:  repository.created_at))").foregroundStyle(.black)
                                 Spacer()
-                                Text("Size: \(repository.size)").foregroundStyle(.black)
+                                Text("Files: \(repository.size)").foregroundStyle(.black)
                             }.padding()
                         }.frame(height: 100).background(RoundedRectangle(cornerRadius: 12.0).stroke(Color.blue, lineWidth: 2.0))
                     })

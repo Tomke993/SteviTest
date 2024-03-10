@@ -49,4 +49,18 @@ class ApiService {
             }
         })
     }
+    
+    func getCommits(forRepo repo: String) {
+        let request = AF.request("https://api.github.com/repos/" + username + "/\(repo)/commits", method: .get, headers: headers)
+        request.validate()
+        request.responseDecodable(of: [CommitBean].self, completionHandler: { response in
+            switch response.result {
+            case let .success(commits):
+                print("Response: \n \(commits)")
+//                complition(repositories)
+            case let .failure(error):
+                print("ERROR \n\(error)")
+            }
+        })
+    }
 }
