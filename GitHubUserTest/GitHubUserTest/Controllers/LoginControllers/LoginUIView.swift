@@ -20,7 +20,7 @@ struct LoginUIView: View {
                 Text("Login will open Git Hub page in browser. After entering username and password you can back to the app to find User Code")
                 TextField(text: $username, label: {
                     HStack {
-                        Text("Username").padding(.horizontal, 10)
+                        Text("GitHub Username").padding(.horizontal, 10)
                     }.padding(.horizontal)
                 }).frame(maxWidth: .infinity, maxHeight: 48).textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: {
