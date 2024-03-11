@@ -16,7 +16,6 @@ class HomeViewModel {
     func loadUser() {
         apiService.getProfile { user in
             self.user = user
-            self.user?.company = "Stevi"
             self.controller?.initView()
         }
     }
