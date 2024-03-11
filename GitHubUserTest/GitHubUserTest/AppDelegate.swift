@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initNavigationController() {
         let navigationController = UINavigationController()
-        let homeViewController = HomeViewController(nibName: nil, bundle: nil)
+        let homeViewController = LoginViewController()
         navigationController.viewControllers = [homeViewController]
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
